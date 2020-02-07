@@ -144,7 +144,7 @@ ul.social-icons {
     height: 100%;
     width: auto;
 }*/
-img {
+img.resize {
   max-width:15%;
   max-height:15%;
 }

@@ -1,5 +1,0 @@
-url: "https://yiherngong.github.io/"
-markdown: kramdown
-theme: jekyll-theme-hacker
-gems:
-  - jekyll-feed

@@ -17,8 +17,9 @@ a {
 }
 
 a:link, a:visited{
-  color: #7fdbff;
-  /*text-decoration: underline;*/
+  /*color: #7fdbff;*/
+  color: blue;
+  font-family: "Times New Roman", serif 
 }
 
 a:hover {
@@ -33,16 +34,16 @@ anchor{
 
 /*p, ul { font-size: 1.5em; line-height: 1.4em; color: #fff; }*/
 /*check*/
-p { font-size: 1.25em; line-height: 1.2em; color: white; font-weight: 200; text-align: justify;}
+p { font-size: 1.25em; line-height: 1.2em; color: white; font-weight: 100; text-align: justify;}
 /*p2{ font-size: 1.0em; line-height: 0.9em; color: #fff; font-weight: 200; text-align: justify; margin-right: 20px}*/
 /*p3{ font-size: 1.25em; line-height: 1.2em; color: #fff; font-weight: 200; text-align: justify;color:#DDDDDD}*/
 ul { font-size: 1.5em; line-height: 1.4em; color: #fff;}
 
 h1, h2, h3, h4 { font-family: 'Lato', 'Sans-Serif';
                 font-weight:300; }
-h1 { font-size: 3em;  }
-h2 { font-size: 2.7em; }
-h3 { font-size: 2.3em;}
+h1 { font-size: 3em; font-style: oblique; font-weight: 1000}
+h2 { font-size: 2.0em; font-weight: 800; font-style: italic}
+h3 { font-size: 1.3em; font-weight: 800}
 h4 { font-size: 1.9em; margin-top: 0.8em; margin-bottom: 0.8em;}
 
 papertitle {
@@ -137,13 +138,16 @@ ul.social-icons {
     margin-right: auto;
 }
 
-img {
+/*img {
     display: inline;
     margin: 0 auto;
     height: 100%;
     width: auto;
+}*/
+img {
+  max-width:15%;
+  max-height:15%;
 }
-
 /*.fa-facebook {
   padding: 10px 14px;
   -o-transition: 0.5s;

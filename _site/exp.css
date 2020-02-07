@@ -1,0 +1,24 @@
+body {
+  font-family: "Verdana", sans-serif;
+  color: white;
+  background-color: grey;
+  margin: 10px auto; width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:link, a:visited{
+  /*color: #7fdbff;*/
+  color: lightblue;
+}
+
+p { font-size: 1.25em; line-height: 1.2em; color: white; font-weight: 200; text-align: justify;}
+nav ul{ font-size: 1.5em; font-family: 'Lato', 'Arial', 'Sans-Serif'; padding: 20px;list-style: none; text-align: right; margin-top: 10px;}
+nav ul li{ display: inline; padding: 20px;}
+ul { font-size: 1.5em; line-height: 1.4em; color: #fff;}
+newstable li{
+  font-family: "Lato"; font-size: 1.25em; line-height: 1.2em; color: #fff; font-weight: 200; text-align: justify;  -webkit-font-smoothing: antialiased;
+}

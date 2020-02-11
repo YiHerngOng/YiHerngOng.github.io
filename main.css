@@ -18,8 +18,9 @@ a {
 
 a:link, a:visited{
   /*color: #7fdbff;*/
-  color: blue;
-  font-family: "Times New Roman", serif 
+  color: yellow;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
 }
 
 a:hover {

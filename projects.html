@@ -27,7 +27,7 @@
 				<h2>Improve robot grasping ability under uncertainties with deep reinforcement learning</h2>
 
 				<h3>Master Thesis</h3>
-				<p>From my previous work, human studies showed that humans performed much better than robots at moving robot fingers while grasping objects under uncertainties. I took one of the found grasping strategies that we learned from human subjects as expert demonstration, and teach robot not only be able to grasp an object at any random in-hand positions, but also capable to grasp a wide variety of objects with different shapes and sizes.</p>
+				<p>From my previous work, human studies showed that humans performed much better than robots at moving robot fingers while grasping objects under uncertainties. I took one of the human-adapted grasping strategies as expert demonstration, and applied deep reinforcement learning to teach robot grasping a wide variety of basic objects at random in-hand positions. The learning algorithm that is implemented on this problem is Deep Deterministic Policy Gradient, one of the state-of-the-art algorithms in the industry. However, expert demonstrations of one object is exposed to the agent prior to learning, followed by pretraning to enhance the learning process.</p>
 				<p>This work is submitted to conference Robotics: Science and Systems (RSS), 2020.</p>
 				<p><a href="https://github.com/YiHerngOng/NCSGen">Github code</a></p>
 			</td>
@@ -41,7 +41,7 @@
 			</td>
 			<td valign="top" width="75%">		
 				<h2>Introduce new robotic manipulation benchmark</h2>
-				<p>Using the testbed we built earlier, I designed a new robotic manipulation benchmark that evaluates the robustness of a robot gripper / hands when the </p>
+				<p>Currently there is only a few existing robotic manipulation benchmarks that evaluate both hardware design and control aspect of robot gripper. Therefore I was motivated to design a new robotic manipulation benchmark to evaluate the mechanical design of robot gripper and the control strategy of grasp planning. This overall framework of the benchmark is to place the robot hand at a pose that object is centered to the hand, and slowly move away the center to simulated "noisy" poses which are becoming increasingly challenging for the robot hand to pick up an object. We need to determine how many poses where robot could successfully pick up the target object. One of the highlights is that binary search is implemented in the benchmark to enhance the process of grasp trials. In addition, I developed a software to run the benchmark autonomously on the physical testbed we built, without having any human interference on resetting the scene for robot grasp trials.</p>
 				<p><a href="https://github.com/YiHerngOng/PosePerturbationBenchmark">Github code</a></p>
 			</td>
 		</tr>
@@ -53,8 +53,8 @@
 				</div>
 			</td>
 			<td valign="top" width="75%">		
-				<h2>Grasp Testing Infrastructure</h2>
-				<p>In order to ease human effort on resetting scenes, putting objects back to the original position, we designed and built a testbed with reset and turntable mechanism that automates robot grasp trials. I was in charge of building the turntable and writing a software that coordinates robot arm and the entire system.</p>
+				<h2>Physical Grasp Testing Infrastructure</h2>
+				<p>Robotic manipulation research usually requires human intervention for resetting the test scene, for example, placing test object back to original position at every grasp trial. This We are interested to build a physical testbed that consists a robust reset mechanism embedded with multiple sensors, including RGB sensors. The main purpose is to automate robot grasp trials, and able to collect massive real-world data, further reducing the challenges brought by sim-2-real applications in robotic manipulation industry.</p>
 				<p><a href="https://github.com/YiHerngOng/PosePerturbationBenchmark">Github code</a></p>
 			</td>
 		</tr>
@@ -66,8 +66,8 @@
 				</div>
 			</td>
 			<td valign="top" width="75%">		
-				<h2>Humans and Robot studies on near contact grasping</h2>
-				<p>I designed, and conducted a humans studies on multiple robot hands to observe the grasping strategies that adapted by humans under uncertainties and constrained environments. I concluded an overall 3 primitive control strategies from humans and turned them into fine-tuned PID grasping controllers. This work published to International Conference on Robots and Systems (IROS), 2019.</p>
+				<h2>Humans and robot studies on near contact grasping</h2>
+				<p>Human is good at grasping daily objects, mainly because most of the objects are designed in human-centric way. In addition, most of the grasp planner focus on finding good candidates of hand placement around an object, without consideration of the finger movement during the grasp. The reason that finger closure is critical is that the moment of contact when fingers are making with the object determines grasp success, most of the time. Therefore we introduced "Near-contact" grasping, a near grasp condition where robot hand and fingers are very close to the object. I designed the experiment, and conducted human studies on multiple robot hands to observe the grasping strategies that demonstrated by humans under environmental uncertainties (where object is not at the center of the hand). I concluded an overall of 3 primitive control strategies from the study and turned them into fine-tuned PID grasping controllers. I published the work to International Conference on Robots and Systems (IROS), and I represented our lab to present my work at the conference. </p>
 				<p><a href="https://yiherngong.github.io/assets/projects/YiHerngOng_IROSpaper_1.pdf">Paper link</a> || <a href="https://www.youtube.com/watch?v=BfeDKMbgFJs">Video</a> || <a href="https://github.com/YiHerngOng/PID_GraspingControlStrategy">Github code</a> </p>
 
 			</td>
@@ -81,8 +81,7 @@
 			</td>
 			<td valign="top" width="75%">			
 				<h2>Evaluate grasp by exploiting geometric information</h2>
-				<p>I collaborated with a student working on generating new grasp metrics that exploit geometric relationships between robot finger pads and object surfaces. This work is published to International Conference on Robotics and Automation, 2019.</p>
-				<!-- <p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8793779">Paper link</a></p> -->
+				<p>To evaluate how good a robot grasp is, we first need metrics for measurement and evaluation. Therefore grasp metrics come into hand. However, grasp metrics are normally involved with the physical contacts between the robot hand and object, which can be very hard to obtain due to many factors such as noise and resolution of the data that we collect from haptic sensors. We were interested in using other representations to measure the quality of a grasp. In summer 2018, I collaborated with a student working on creating a novel grasp metrics that exploit geometric relationships between robot hand and object surfaces. To summarize, we collected hundreds of robot grasp samples on multiple objects, and measured the change of distance between the robot hand and object throughout the entire grasp. We then applied machine learning to train a grasp quality classifier that is able to tell us how good a grasp is, given the distance. This work is published to International Conference on Robotics and Automation, 2019.</p>
 				<p><a href="https://yiherngong.github.io/assets/projects/YiHerngOng_ICRApaper2019.pdf">Paper link</a></p>				
 			</td>
 		</tr>
@@ -94,8 +93,8 @@
 				</div>
 			</td>
 			<td valign="top" width="75%">			
-				<h2>Analyze capabilities of robot hands from human studies</h2>
-				<p>I assisted a PhD student to run experiments, analyze data to evaluate capabilites of robot hands with different DOFs, joint designs and actuation schemes. This work is publised to International Conference on Robots and Systems, 2018.</p>
+				<h2>Analyze the capabilities of robot hands from human studies</h2>
+				<p>Robot hand design is very spontaneous. Many robot hands are designed in ways that are only able to pick up specific objects, or to do particular tasks. Robot hand design can be stratified into multiple catagories: number of fingers, number of finger joints, actuation schemes of the robot finger, stiffness of finger joint etc. We designed human studies featuring some difficult manipulation tasks to investigate the roles that different hand features are playing in these tasks. My main responsibilities were to assist the paper lead (a PhD student) to run experiments and analyze data. This work is published to International Conference on Robots and Systems, 2018.</p>
 				<p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594344">Paper link</a></p>	
 			</td>
 		</tr>
@@ -108,7 +107,7 @@
 			</td>
 			<td valign="top" width="75%">			
 				<h2>4-DOF Yale OpenHand Model O</h2>
-				<p>I built a 4-DOF robot hand that is designed by robotics group at Yale University.</p>
+				<p>While I first joined the research group as undergraduate research assistant, I built a open-sourced, 4-DOF robot gripper that was initially designed and built by Yale University manipulation group. This hand is called <a href="https://www.eng.yale.edu/grablab/openhand/model_o.html#about">Yale Openhand Model O</a>, that is underactuated and controlled by using 1 tendon (string) on each finger. I also developed a control interface to actuate the robot hand.</p>
 				<p><a href="https://github.com/YiHerngOng/Openhand_Project">Github code</a></p>
 			</td>
 		</tr>
@@ -121,7 +120,7 @@
 			</td>
 			<td valign="top" width="75%">			
 				<h2>Robot Finger Pad Design</h2>
-				<p>It was a senior captone design project in my senior year. I collaborated with a Mechanical Engineering student to design a soft-material pad for robot fingers by using 3D printing. Our design aimed to improve grasping ability (mechanically) of a Barrett Hand.</p>
+				<p>It was a senior captone design project during my senior year. Existing 4-DOF Barrett Hand could hardly pick a small and thin object, such as pen, plate etc. We designed a soft finger pads that could be easily put on the robot fingers. Soft finger pad features bumps near the finger tip, and stiff plate that acts finger "nails" to increase the contact surface area with small objects. Throughout the entire prototyping process, CAD design software SolidWorks, analysis tools such as finite element analysis, as well as state-of-the-art 3D printer were used to complete the project. We presented our work at Oregon State University's Annual Engineering Expo.</p>
 			</td>
 		</tr>
 	</table>
